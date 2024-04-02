@@ -55,7 +55,9 @@ button.addEventListener('click', function () {
     fetch('https://dog.ceo/api/breeds/image/random')
         .then(res => res.json())
         .then(({ message }) => {
-            img.src= message
+            img.style.height = '40vh'
+            img.style.width = '50vh'
+            img.src = message
         })
 });
 
