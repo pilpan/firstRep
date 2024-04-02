@@ -33,11 +33,11 @@ let test = ''
 function greet(name = 'Алексей') {
     test = name[0]
     // name = name.toUpperCase()
-    return 'Привет, '+name;
+    return 'Привет, ' + name;
 }
 
-let plus = (a,b) => {
-    return a+b
+let plus = (a, b) => {
+    return a + b
 }
 let greeting = greet('Миша');
 
@@ -49,10 +49,15 @@ console.log(emptyPage);
 emptyPage.innerText = '23'
 emptyPage.innerHTML = `<a href='#'>33</a>`
 emptyPage.remove()
-
+let img = document.createElement('img')
+output.appendChild(img)
 button.addEventListener('click', function () {
-    output.innerHTML = greeting;
+    fetch('https://dog.ceo/api/breeds/image/random')
+        .then(res => res.json())
+        .then(({ message }) => {
+            img.src= message
+        })
 });
 
 console.log(greet('123').a);
-console.log(plus(4,5));
+console.log(plus(4, 5));
