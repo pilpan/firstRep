@@ -3,10 +3,19 @@
 } */
 
 
-.flexBox{
+.flexBox {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+img {
+    -webkit-border-radius: 20px;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius: 20px;
+    -moz-border-radius-bottomright: 0;
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
 }
